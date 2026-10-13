@@ -32,7 +32,7 @@ export default function Home() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/f51f3fffd_generated_image.png')" }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-40 pb-28 sm:pt-48 sm:pb-36 text-center">
           <span className="hero-eyebrow mb-6">Welcome to {SITE.shortName}</span>

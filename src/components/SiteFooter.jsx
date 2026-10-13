@@ -18,7 +18,7 @@ export default function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <Logo className="h-16 w-auto brightness-0 invert opacity-95" />
+            <Logo className="h-16 w-auto" />
             <p className="mt-6 max-w-xs font-heading italic text-lg text-primary-foreground/80">
               {SITE.tagline}
             </p>

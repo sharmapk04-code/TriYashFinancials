@@ -40,12 +40,7 @@ export default function SiteHeader() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-20 items-center justify-between gap-6">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
-            <Logo
-              className={cn(
-                "h-12 w-auto sm:h-14 transition-all duration-500",
-                !scrolled ? "brightness-0 invert opacity-95" : "brightness-100 invert-0"
-              )}
-            />
+            <Logo className="h-12 w-auto rounded sm:h-14" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -58,7 +53,9 @@ export default function SiteHeader() {
                     "relative px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors",
                     isActive
                       ? "text-accent"
-                      : "text-foreground/75 hover:text-accent"
+                      : scrolled
+                      ? "text-foreground/75 hover:text-accent"
+                      : "text-white/85 hover:text-accent"
                   )
                 }
               >
@@ -79,7 +76,10 @@ export default function SiteHeader() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center p-2 text-foreground"
+            className={cn(
+              "lg:hidden inline-flex items-center justify-center p-2",
+              scrolled ? "text-foreground" : "text-white"
+            )}
             aria-label="Toggle menu"
             aria-expanded={open}
           >
