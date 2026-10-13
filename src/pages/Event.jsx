@@ -8,37 +8,37 @@ const events = [
   {
     date: "NOV 15",
     year: "2026",
-    title: "Wealth Foundations: A Family Planning Workshop",
+    title: "Life Insurance Essentials: A Family Protection Workshop",
     type: "In-Person Seminar",
     time: "10:00 AM – 12:00 PM CT",
     location: "TriYash Financial Center, New York, NY",
-    desc: "An interactive workshop covering the three pillars — protect, grow, and preserve — with a live Q&A from our senior advisors.",
+    desc: "An interactive workshop on choosing the right life insurance for your family, with a live Q&A from our senior advisors.",
     seats: "Limited seats",
   },
   {
     date: "NOV 22",
     year: "2026",
-    title: "Retirement Readiness Webinar",
+    title: "Medicare Made Simple: A Primer for Turning 65",
     type: "Online Webinar",
     time: "7:00 PM – 8:30 PM CT",
     location: "Live Online",
-    desc: "Learn how to design a retirement income stream that lasts a lifetime, including pension, 401(k), and withdrawal strategies.",
+    desc: "Understand Medicare Parts A, B, C, and D — and how to choose between Advantage and supplemental coverage.",
     seats: "Free to attend",
   },
   {
     date: "DEC 06",
     year: "2026",
-    title: "Legacy & Estate Planning Masterclass",
+    title: "Health Insurance Open Enrollment Masterclass",
     type: "In-Person Seminar",
     time: "1:00 PM – 4:00 PM CT",
     location: "TriYash Financial Center, New York, NY",
-    desc: "A deep dive into passing on wealth efficiently — trusts, beneficiaries, and the conversations that matter most.",
+    desc: "A deep dive into comparing health plans during open enrollment — networks, premiums, deductibles, and subsidies.",
     seats: "Limited seats",
   },
   {
     date: "DEC 13",
     year: "2026",
-    title: "Career in Financial Services: Open House",
+    title: "Career in Insurance: Open House",
     type: "Online Webinar",
     time: "6:00 PM – 7:00 PM CT",
     location: "Live Online",
@@ -48,9 +48,9 @@ const events = [
 ];
 
 const past = [
-  { date: "OCT 2026", title: "Protecting Your Income: Insurance Essentials" },
-  { date: "SEP 2026", title: "College Funding Without Compromise" },
-  { date: "AUG 2026", title: "Market Volatility & the Long-Term Investor" },
+  { date: "OCT 2026", title: "Open Enrollment: Choosing the Right Health Plan" },
+  { date: "SEP 2026", title: "Term vs. Whole Life: A Side-by-Side Comparison" },
+  { date: "AUG 2026", title: "Medicare Advantage vs. Medigap: What to Know" },
 ];
 
 export default function Event() {

@@ -6,21 +6,21 @@ import { cn } from "@/lib/utils";
 
 const posts = [
   {
-    title: "The Three Pillars: A Family's Guide to Protect, Grow, Preserve",
-    excerpt: "Why the most resilient financial plans rest on three foundations — and how to build each one without overcomplicating your life.",
-    category: "Foundations",
+    title: "The Complete Family Guide to Life & Health Coverage",
+    excerpt: "Why the most resilient families rest on two foundations — life insurance and health coverage — and how to build both without overcomplicating your life.",
+    category: "Life Insurance",
     date: "Oct 8, 2026",
     read: "6 min",
     featured: true,
   },
-  { title: "Life Insurance 101: Term vs. Whole Life, Explained Simply", excerpt: "Cut through the jargon and understand which protection fits your family.", category: "Protection", date: "Sep 30, 2026", read: "5 min" },
-  { title: "How to Talk to Your Parents About Their Estate", excerpt: "A compassionate, practical guide to the conversation every family needs to have.", category: "Legacy", date: "Sep 21, 2026", read: "7 min" },
-  { title: "Market Volatility: Why Boring Beats Brilliant", excerpt: "The case for disciplined, long-term investing when headlines scream otherwise.", category: "Investing", date: "Sep 12, 2026", read: "4 min" },
-  { title: "Funding College Without Sacrificing Retirement", excerpt: "You can do both — with the right sequencing and a clear set of priorities.", category: "Education", date: "Sep 2, 2026", read: "6 min" },
-  { title: "The First Five Years: Building a Career in Financial Services", excerpt: "What it really takes to start and grow a purpose-driven advisory practice.", category: "Career", date: "Aug 24, 2026", read: "8 min" },
+  { title: "Term vs. Whole Life: Which Protection Fits Your Family?", excerpt: "Cut through the jargon and understand which life insurance fits your family.", category: "Life Insurance", date: "Sep 30, 2026", read: "5 min" },
+  { title: "Open Enrollment: How to Choose the Right Health Plan", excerpt: "Networks, premiums, deductibles, and subsidies — a practical checklist for picking a plan.", category: "Health Insurance", date: "Sep 21, 2026", read: "7 min" },
+  { title: "Medicare 101: Parts A, B, C, and D, Explained Simply", excerpt: "Turning 65? Here's the plain-English guide to Medicare you've been looking for.", category: "Medicare", date: "Sep 12, 2026", read: "4 min" },
+  { title: "Critical Illness & Disability: The Coverage Most Families Skip", excerpt: "The policies that protect your income when a diagnosis changes everything.", category: "Health Insurance", date: "Sep 2, 2026", read: "6 min" },
+  { title: "The First Five Years: Building a Career in Insurance", excerpt: "What it really takes to start and grow a purpose-driven insurance practice.", category: "Career", date: "Aug 24, 2026", read: "8 min" },
 ];
 
-const categories = ["All", "Foundations", "Protection", "Investing", "Legacy", "Education", "Career"];
+const categories = ["All", "Life Insurance", "Health Insurance", "Medicare", "Career"];
 
 export default function Blog() {
   const [active, setActive] = useState("All");
@@ -39,8 +39,8 @@ export default function Blog() {
       <PageHero
         crumb="Blog"
         eyebrow="Insights"
-        title={<>Practical wisdom for <span className="text-gold-gradient">family wealth.</span></>}
-        subtitle="Clear, jargon-free perspectives on protecting, growing, and passing on what you've worked hard to build."
+        title={<>Practical wisdom on <span className="text-gold-gradient">life & health coverage.</span></>}
+        subtitle="Clear, jargon-free perspectives on life insurance, health plans, Medicare, and protecting what you've worked hard to build."
         actions={<CTAButton to="/contact">Get Started</CTAButton>}
       />
 
@@ -129,7 +129,7 @@ export default function Blog() {
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
           <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl">Get insights in your inbox.</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Occasional, thoughtful perspectives on family wealth. No spam, ever.</p>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Occasional, thoughtful perspectives on life and health insurance. No spam, ever.</p>
           <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
             <input
               type="email"

@@ -2,7 +2,7 @@
 export const SITE = {
   name: "TriYash Financial Services LLC",
   shortName: "TriYash",
-  tagline: "Securing Families' Financial Future",
+  tagline: "Protecting Families Through Life & Health Insurance",
   logoUrl: "https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/7464354b8_Logo-1.png",
   phone: "(000) 000-0000",
   email: "info@triyashfinancial.com",

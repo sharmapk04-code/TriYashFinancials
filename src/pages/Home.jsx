@@ -1,26 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, TrendingUp, Users, LineChart, BookOpen, CalendarDays, Quote } from "lucide-react";
+import { ArrowRight, ShieldCheck, TrendingUp, Users, HeartPulse, Umbrella, BookOpen, CalendarDays, Quote } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 import { SITE } from "@/lib/siteConfig";
 
 const stats = [
   { value: "25+", label: "Years of Combined Experience" },
   { value: "1,200+", label: "Families Secured" },
-  { value: "$180M+", label: "Assets Protected" },
+  { value: "$180M+", label: "Coverage in Force" },
   { value: "98%", label: "Client Retention" },
 ];
 
 const services = [
-  { icon: ShieldCheck, title: "Financial Protection", desc: "Comprehensive life and income protection strategies that shield what matters most." },
-  { icon: TrendingUp, title: "Wealth Accumulation", desc: "Disciplined, long-term accumulation plans built around your family's goals." },
-  { icon: LineChart, title: "Retirement Planning", desc: "Retirement roadmaps that turn steady contributions into lasting independence." },
+  { icon: ShieldCheck, title: "Life Insurance", desc: "Term, whole, and universal coverage that protects your family's income and future." },
+  { icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach." },
+  { icon: Umbrella, title: "Medicare & Supplemental", desc: "Medicare, disability, and critical illness coverage that fills every gap." },
 ];
 
 const values = [
   { icon: ShieldCheck, title: "Integrity First", desc: "Every recommendation is made in your family's best interest — always." },
   { icon: Users, title: "Family-Centered", desc: "We plan across generations, not just for the next quarter." },
-  { icon: TrendingUp, title: "Growth Mindset", desc: "We build strategies designed to compound quietly over decades." },
+  { icon: TrendingUp, title: "Lifelong Guidance", desc: "We review your coverage as life changes — marriage, children, retirement." },
 ];
 
 export default function Home() {
@@ -37,10 +37,10 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-40 pb-28 sm:pt-48 sm:pb-36 text-center">
           <span className="hero-eyebrow mb-6">Welcome to {SITE.shortName}</span>
           <h1 className="mx-auto max-w-4xl text-balance font-heading text-4xl font-light leading-[1.05] sm:text-6xl lg:text-7xl">
-            The Architecture of <span className="text-gold-gradient">Family Wealth</span>
+            Protection for Your Family's <span className="text-gold-gradient">Life & Health</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-balance text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-            {SITE.tagline}. We help families build, protect, and pass on prosperity with clarity, discipline, and a plan that lasts for generations.
+            {SITE.tagline}. Our advisors help you choose the right coverage — protection that guards your health, your income, and the people you love.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact">Get Started</CTAButton>
@@ -68,12 +68,12 @@ export default function Home() {
             <div className="lg:col-span-5">
               <span className="hero-eyebrow mb-5 text-primary">Why TriYash</span>
               <h2 className="text-balance font-heading text-3xl font-light leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                A foundation built on three pillars of lasting security.
+                A foundation built on three promises of lasting security.
               </h2>
             </div>
             <div className="lg:col-span-7">
               <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-                "Tri" stands for the three commitments at the heart of our practice — <span className="font-semibold text-foreground">Protect, Grow, and Preserve</span>. We translate complex financial decisions into a clear, generational plan so your family can move forward with confidence, no matter what the markets do next.
+                "Tri" stands for the three promises at the heart of our practice — <span className="font-semibold text-foreground">protecting your life, safeguarding your health, and securing your family's future</span>. We translate complex insurance decisions into clear, needs-based coverage so your family can move forward with confidence, no matter what life brings.
               </p>
               <div className="mt-8 grid gap-5 sm:grid-cols-3">
                 {values.map((v) => (
@@ -95,7 +95,7 @@ export default function Home() {
           <div className="max-w-2xl">
             <span className="hero-eyebrow mb-5 text-primary">What We Do</span>
             <h2 className="text-balance font-heading text-3xl font-light leading-tight sm:text-4xl lg:text-5xl">
-              Strategies engineered for every season of life.
+              Coverage for every season of life.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -154,7 +154,7 @@ export default function Home() {
               <BookOpen className="h-8 w-8 text-accent" />
               <h3 className="mt-5 font-heading text-2xl">From the Blog</h3>
               <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
-                Practical insights on protecting, growing, and passing on family wealth.
+                Practical insights on life, health, and Medicare coverage for your family.
               </p>
               <Link to="/blog" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 Read the Blog <ArrowRight className="h-4 w-4" />

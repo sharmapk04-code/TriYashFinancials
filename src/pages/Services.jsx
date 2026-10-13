@@ -1,19 +1,19 @@
 import React from "react";
-import { ShieldCheck, TrendingUp, LineChart, GraduationCap, Home, Landmark, ArrowRight, Check } from "lucide-react";
+import { ShieldCheck, HeartPulse, Stethoscope, Umbrella, Home, Landmark, ArrowRight, Check } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 
 const services = [
-  { icon: ShieldCheck, title: "Financial Protection", desc: "Life insurance and income protection strategies that shield your family from the unexpected, keeping your plan on track no matter what happens.", points: ["Term & whole life solutions", "Income protection", "Critical illness cover"] },
-  { icon: TrendingUp, title: "Wealth Accumulation", desc: "Disciplined, long-term accumulation plans that turn steady contributions into meaningful, compounding wealth over time.", points: ["Goal-based investing", "Asset allocation", "Tax-efficient growth"] },
-  { icon: LineChart, title: "Retirement Planning", desc: "Retirement roadmaps that convert today's savings into a dependable income stream for the rest of your life.", points: ["Retirement income design", "Pension & 401(k) strategy", "Withdrawal planning"] },
-  { icon: GraduationCap, title: "Education Funding", desc: "Structured plans to fund your children's education without compromising your own retirement goals.", points: ["529 & education savings", "Multi-child planning", "Scholarship strategy"] },
-  { icon: Home, title: "Mortgage & Debt Strategy", desc: "Smart debt management and mortgage planning to free up cash flow and accelerate your path to financial freedom.", points: ["Debt elimination plans", "Mortgage review", "Cash-flow optimization"] },
-  { icon: Landmark, title: "Estate & Legacy Planning", desc: "Thoughtful estate and legacy structures that pass on what you've built — efficiently, and according to your wishes.", points: ["Wealth transfer", "Trust & beneficiary review", "Legacy planning"] },
+  { icon: ShieldCheck, title: "Term Life Insurance", desc: "Affordable, straightforward protection for the years your family depends on you most — the mortgage, the income, the future.", points: ["Level-term & convertible policies", "Income replacement planning", "Mortgage protection"] },
+  { icon: Landmark, title: "Whole & Permanent Life", desc: "Lifelong coverage with cash value that grows over time — protection that never expires and can support your legacy.", points: ["Whole & universal life", "Cash value accumulation", "Estate & final expense funding"] },
+  { icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach — on and off the marketplace.", points: ["Individual & family plans", "Employer & group coverage", "Marketplace & ACA guidance"] },
+  { icon: Stethoscope, title: "Medicare & Supplemental", desc: "Turning 65 or already there? We make Medicare simple — from Advantage plans to Medigap and Part D.", points: ["Medicare Advantage (Part C)", "Medigap & supplemental plans", "Prescription drug (Part D)"] },
+  { icon: Umbrella, title: "Disability & Critical Illness", desc: "Income protection and lump-sum benefits that fill the gap when illness or injury keeps you from working.", points: ["Disability income coverage", "Critical illness & cancer policies", "Hospital indemnity plans"] },
+  { icon: Home, title: "Final Expense & Legacy", desc: "Modest, guaranteed coverage that eases the burden on loved ones and honors your wishes.", points: ["Final expense & burial insurance", "Annuities for guaranteed income", "Beneficiary & legacy review"] },
 ];
 
 const steps = [
   { n: "01", title: "Discovery", desc: "We listen to your story, your goals, and the people who depend on you." },
-  { n: "02", title: "Strategy", desc: "We design a personalized plan across all three pillars — protect, grow, preserve." },
+  { n: "02", title: "Strategy", desc: "We design a personalized plan across all three promises — protect, cover, preserve." },
   { n: "03", title: "Implementation", desc: "We put your plan into action with clear, prioritized steps and the right solutions." },
   { n: "04", title: "Ongoing Care", desc: "We review and adjust your plan as life evolves, keeping you on course for decades." },
 ];
@@ -24,8 +24,8 @@ export default function Services() {
       <PageHero
         crumb="Services"
         eyebrow="What We Offer"
-        title={<>Comprehensive strategies for <span className="text-gold-gradient">every season of life.</span></>}
-        subtitle="From protecting your income to preserving your legacy, our services work together as one coordinated plan for your family's financial future."
+        title={<>Comprehensive coverage for <span className="text-gold-gradient">every season of life.</span></>}
+        subtitle="From term life to Medicare, our coverage options work together as one coordinated plan for your family's protection."
         actions={
           <>
             <CTAButton to="/contact">Get Started</CTAButton>
@@ -81,7 +81,7 @@ export default function Services() {
       <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
           <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl">Not sure where to start? We can help.</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Book a complimentary consultation and we'll map out the right plan for your family.</p>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Book a complimentary consultation and we'll map out the right coverage for your family.</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact">Contact Us</CTAButton>
             <CTAButton to="/business-opportunity" variant="outline">Business Opportunity</CTAButton>

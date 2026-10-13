@@ -10,8 +10,8 @@ const benefits = [
 ];
 
 const steps = [
-  { n: "01", title: "Apply", desc: "Tell us about your goals and what draws you to financial services." },
-  { n: "02", title: "Onboard & Train", desc: "Complete our structured onboarding and earn the certifications you need." },
+  { n: "01", title: "Apply", desc: "Tell us about your goals and what draws you to the insurance industry." },
+  { n: "02", title: "Onboard & Train", desc: "Complete our structured onboarding and earn your life & health insurance licenses." },
   { n: "03", title: "Build Your Practice", desc: "Begin serving families with the full backing of our tools and mentors." },
   { n: "04", title: "Grow & Lead", desc: "Expand your team, deepen your impact, and shape the next generation of advisors." },
 ];
@@ -85,7 +85,7 @@ export default function BusinessOpportunity() {
             <div className="lg:col-span-6">
               <span className="hero-eyebrow mb-5 text-primary">Who We're Looking For</span>
               <h2 className="text-balance font-heading text-3xl font-light leading-tight sm:text-4xl">
-                You don't need a finance degree. You need the right heart.
+                You don't need an insurance background. You need the right heart.
               </h2>
               <p className="mt-5 text-base leading-relaxed text-muted-foreground">
                 We welcome people from every background who share our commitment to families. If these describe you, we'd love to talk.

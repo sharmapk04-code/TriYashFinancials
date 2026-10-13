@@ -5,7 +5,8 @@ import { SITE } from "@/lib/siteConfig";
 
 const reasons = [
   { value: "consultation", label: "Schedule a consultation" },
-  { value: "services", label: "Ask about a service" },
+  { value: "quote", label: "Request an insurance quote" },
+  { value: "services", label: "Ask about a policy or coverage" },
   { value: "opportunity", label: "Business opportunity" },
   { value: "event", label: "Reserve an event seat" },
   { value: "other", label: "Something else" },
@@ -33,7 +34,7 @@ export default function Contact() {
       <PageHero
         crumb="Contact"
         eyebrow="Let's Talk"
-        title={<>Your family's plan starts with a <span className="text-gold-gradient">conversation.</span></>}
+        title={<>Your family's protection starts with a <span className="text-gold-gradient">conversation.</span></>}
         subtitle="Tell us a little about your goals and we'll connect you with the right advisor. No pressure, no jargon — just honest guidance."
         actions={<CTAButton to="/services" variant="outline">Explore Services</CTAButton>}
       />
@@ -93,7 +94,7 @@ export default function Contact() {
                       rows={5}
                       required
                       className="w-full border border-border bg-card px-4 py-3 text-sm text-foreground focus:border-accent focus:outline-none"
-                      placeholder="Tell us a little about your goals..."
+                      placeholder="Tell us a little about your coverage needs..."
                     />
                   </div>
                   <button

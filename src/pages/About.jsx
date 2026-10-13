@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Target, Eye, Heart, ShieldCheck, Users, TrendingUp, Award, ArrowRight } from "lucide-react";
+import { Target, Eye, Heart, HeartPulse, ShieldCheck, Users, Award, ArrowRight } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 
 const pillars = [
-  { icon: ShieldCheck, title: "Protect", desc: "Safeguarding families against life's uncertainties with disciplined risk management." },
-  { icon: TrendingUp, title: "Grow", desc: "Building wealth steadily through time-tested, compounding strategies." },
-  { icon: Users, title: "Preserve", desc: "Passing prosperity across generations with thoughtful estate and legacy planning." },
+  { icon: ShieldCheck, title: "Protect", desc: "Life insurance that shields your family's income and future when the unexpected happens." },
+  { icon: HeartPulse, title: "Cover", desc: "Health, Medicare, and supplemental plans that keep quality care within reach." },
+  { icon: Users, title: "Preserve", desc: "Final expense and legacy coverage that eases the burden on those you love." },
 ];
 
 const values = [
@@ -22,7 +22,7 @@ export default function About() {
         crumb="About Us"
         eyebrow="Our Story"
         title={<>A practice built to <span className="text-gold-gradient">protect families</span>, not products.</>}
-        subtitle="TriYash Financial Services LLC was founded on a simple conviction: that lasting wealth is built one family at a time, with patience, integrity, and a plan that spans generations."
+        subtitle="TriYash Financial Services LLC was founded on a simple conviction: that every family deserves life and health coverage chosen with patience, integrity, and their best interests at heart."
         actions={
           <>
             <CTAButton to="/contact">Get Started</CTAButton>
@@ -41,10 +41,10 @@ export default function About() {
                 Three commitments. One unshakable foundation.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                The name "TriYash" reflects our three-part philosophy: <strong className="text-foreground">Tri</strong> — the three pillars of Protect, Grow, and Preserve — and <strong className="text-foreground">Yash</strong> — the prosperity and success we help families achieve. Together, they form the architecture of a secure financial future.
+                The name "TriYash" reflects our three-part philosophy: <strong className="text-foreground">Tri</strong> — the three promises of Protect, Cover, and Preserve — and <strong className="text-foreground">Yash</strong> — the peace of mind and security we help families achieve. Together, they form the architecture of a fully protected family.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                We are not tied to a single product or provider. Our advisors act as fiduciary-minded partners, building strategies that fit your life — not the other way around.
+                We are independent and not tied to a single carrier. Our advisors shop the market to find coverage that fits your life and your budget — not the other way around.
               </p>
             </div>
             <div className="lg:col-span-6">
@@ -73,14 +73,14 @@ export default function About() {
               <Target className="h-8 w-8 text-accent" />
               <h3 className="mt-5 font-heading text-3xl">Our Mission</h3>
               <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
-                To empower families to achieve financial independence through honest advice, disciplined planning, and strategies built to endure across generations.
+                To protect every family with honest, needs-based life and health insurance guidance — never selling a policy, always solving a problem.
               </p>
             </div>
             <div>
               <Eye className="h-8 w-8 text-accent" />
               <h3 className="mt-5 font-heading text-3xl">Our Vision</h3>
               <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
-                To become the most trusted family financial partner — a firm known not for what it sells, but for the security it provides and the futures it protects.
+                To become the most trusted life and health insurance partner — a firm known not for what it sells, but for the families it protects.
               </p>
             </div>
           </div>
