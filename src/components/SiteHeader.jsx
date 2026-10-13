@@ -40,7 +40,12 @@ export default function SiteHeader() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-20 items-center justify-between gap-6">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
-            <Logo className="h-12 w-auto sm:h-14" />
+            <Logo
+              className={cn(
+                "h-12 w-auto sm:h-14 transition-all duration-500",
+                !scrolled ? "brightness-0 invert opacity-95" : "brightness-100 invert-0"
+              )}
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

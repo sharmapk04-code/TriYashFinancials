@@ -28,11 +28,11 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="pointer-events-none absolute inset-0 opacity-[0.06]">
-          <div className="absolute left-1/2 top-1/2 h-[140%] w-[140%] -translate-x-1/2 -translate-y-1/2 bg-[url('https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/7464354b8_Logo-1.png')] bg-contain bg-center bg-no-repeat" />
-        </div>
-        <div className="pointer-events-none absolute -left-32 top-1/4 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div
+          className="pointer-events-none absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/f51f3fffd_generated_image.png')" }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-40 pb-28 sm:pt-48 sm:pb-36 text-center">
           <span className="hero-eyebrow mb-6">Welcome to {SITE.shortName}</span>
