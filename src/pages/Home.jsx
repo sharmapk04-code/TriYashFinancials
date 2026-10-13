@@ -50,14 +50,14 @@ export default function Home() {
 
         {/* Stats bar */}
         <div className="relative border-t border-primary-foreground/15 bg-primary-foreground/[0.03]">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-primary-foreground/10 px-5 sm:px-8 lg:grid-cols-4 hidden">
-            {stats.map((s) =>
-            <div key={s.label} className="px-4 py-8 text-center">
-                <div className="font-heading text-3xl font-medium text-accent sm:text-4xl">{s.value}</div>
-                <div className="mt-2 text-xs font-medium uppercase tracking-[0.15em] text-primary-foreground/65">{s.label}</div>
-              </div>
-            )}
-          </div>
+          
+
+
+
+
+
+
+          
         </div>
       </section>
 
