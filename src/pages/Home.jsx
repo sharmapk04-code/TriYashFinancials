@@ -5,23 +5,23 @@ import PageHero, { CTAButton } from "@/components/PageHero";
 import { SITE } from "@/lib/siteConfig";
 
 const stats = [
-  { value: "25+", label: "Years of Combined Experience" },
-  { value: "1,200+", label: "Families Secured" },
-  { value: "$180M+", label: "Coverage in Force" },
-  { value: "98%", label: "Client Retention" },
-];
+{ value: "25+", label: "Years of Combined Experience" },
+{ value: "1,200+", label: "Families Secured" },
+{ value: "$180M+", label: "Coverage in Force" },
+{ value: "98%", label: "Client Retention" }];
+
 
 const services = [
-  { icon: ShieldCheck, title: "Life Insurance", desc: "Term, whole, and universal coverage that protects your family's income and future." },
-  { icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach." },
-  { icon: Umbrella, title: "Medicare & Supplemental", desc: "Medicare, disability, and critical illness coverage that fills every gap." },
-];
+{ icon: ShieldCheck, title: "Life Insurance", desc: "Term, whole, and universal coverage that protects your family's income and future." },
+{ icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach." },
+{ icon: Umbrella, title: "Medicare & Supplemental", desc: "Medicare, disability, and critical illness coverage that fills every gap." }];
+
 
 const values = [
-  { icon: ShieldCheck, title: "Integrity First", desc: "Every recommendation is made in your family's best interest — always." },
-  { icon: Users, title: "Family-Centered", desc: "We plan across generations, not just for the next quarter." },
-  { icon: TrendingUp, title: "Lifelong Guidance", desc: "We review your coverage as life changes — marriage, children, retirement." },
-];
+{ icon: ShieldCheck, title: "Integrity First", desc: "Every recommendation is made in your family's best interest — always." },
+{ icon: Users, title: "Family-Centered", desc: "We plan across generations, not just for the next quarter." },
+{ icon: TrendingUp, title: "Lifelong Guidance", desc: "We review your coverage as life changes — marriage, children, retirement." }];
+
 
 export default function Home() {
   return (
@@ -30,8 +30,8 @@ export default function Home() {
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/f51f3fffd_generated_image.png')" }}
-        />
+          style={{ backgroundImage: "url('https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/f51f3fffd_generated_image.png')" }} />
+        
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-40 pb-28 sm:pt-48 sm:pb-36 text-center">
@@ -50,13 +50,13 @@ export default function Home() {
 
         {/* Stats bar */}
         <div className="relative border-t border-primary-foreground/15 bg-primary-foreground/[0.03]">
-          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-primary-foreground/10 px-5 sm:px-8 lg:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="px-4 py-8 text-center">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-primary-foreground/10 px-5 sm:px-8 lg:grid-cols-4 hidden">
+            {stats.map((s) =>
+            <div key={s.label} className="px-4 py-8 text-center">
                 <div className="font-heading text-3xl font-medium text-accent sm:text-4xl">{s.value}</div>
                 <div className="mt-2 text-xs font-medium uppercase tracking-[0.15em] text-primary-foreground/65">{s.label}</div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -76,13 +76,13 @@ export default function Home() {
                 "Tri" stands for the three promises at the heart of our practice — <span className="font-semibold text-foreground">protecting your life, safeguarding your health, and securing your family's future</span>. We translate complex insurance decisions into clear, needs-based coverage so your family can move forward with confidence, no matter what life brings.
               </p>
               <div className="mt-8 grid gap-5 sm:grid-cols-3">
-                {values.map((v) => (
-                  <div key={v.title} className="border-t border-border pt-5">
+                {values.map((v) =>
+                <div key={v.title} className="border-t border-border pt-5">
                     <v.icon className="h-6 w-6 text-accent" />
                     <h3 className="mt-3 font-heading text-xl text-foreground">{v.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -99,8 +99,8 @@ export default function Home() {
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {services.map((s) => (
-              <div key={s.title} className="group relative bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+            {services.map((s) =>
+            <div key={s.title} className="group relative bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
                 <div className="flex h-12 w-12 items-center justify-center bg-primary text-accent">
                   <s.icon className="h-6 w-6" />
                 </div>
@@ -110,7 +110,7 @@ export default function Home() {
                   Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -182,6 +182,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }
