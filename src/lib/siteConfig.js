@@ -7,7 +7,7 @@ export const SITE = {
   logoLandscapeUrl: "https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/6fb203946_LogoLandscape.png",
   phone: "(972) 400-5149",
   email: "info@triyashfinancial.com",
-  address: "123 Financial Plaza, Suite 1000, New York, NY 10001",
+  address: "Frisco, TX 75035",
   hours: "Mon–Fri: 9:00 AM – 6:00 PM ET",
   social: {
     linkedin: "#",
