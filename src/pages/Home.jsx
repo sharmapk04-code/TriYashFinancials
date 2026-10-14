@@ -35,7 +35,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/60" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-28 sm:pt-24 sm:pb-36 text-center">
-          <span className="hero-eyebrow mb-6 hidden">Welcome to {SITE.shortName}</span>
+          
           <h1 className="mx-auto max-w-4xl text-balance font-heading text-4xl font-light leading-[1.05] sm:text-6xl lg:text-7xl">
             Protection for Your Family's <span className="text-gold-gradient">Life & Health</span>
           </h1>
