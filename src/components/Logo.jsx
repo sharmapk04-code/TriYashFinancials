@@ -3,20 +3,10 @@ import { Image } from "@/components/ui/image";
 import { SITE } from "@/lib/siteConfig";
 import { cn } from "@/lib/utils";
 
-export default function Logo({ className, variant = "full" }) {
-  if (variant === "mark") {
-    return (
-      <Image
-        src={SITE.logoUrl}
-        alt={`${SITE.name} logo`}
-        className={cn("object-contain", className)}
-        fittingType="fit"
-      />
-    );
-  }
+export default function Logo({ className, src }) {
   return (
     <Image
-      src={SITE.logoUrl}
+      src={src || SITE.logoUrl}
       alt={`${SITE.name} logo`}
       className={cn("object-contain", className)}
       fittingType="fit"

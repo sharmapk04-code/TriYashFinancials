@@ -22,10 +22,10 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 shadow-sm backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex h-32 items-center justify-between gap-6 sm:h-40">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex items-center justify-between gap-6">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
-            <Logo className="h-28 w-28 rounded sm:h-32 sm:w-32" />
+            <Logo src={SITE.logoLandscapeUrl} className="h-20 w-[271px] sm:h-24 sm:w-[326px]" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
