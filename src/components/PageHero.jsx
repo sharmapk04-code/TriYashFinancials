@@ -7,7 +7,7 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, actions, dar
   return (
     <section
       className={cn(
-        "relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28",
+        "relative overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28",
         dark ? "bg-primary text-primary-foreground" : "bg-background text-foreground"
       )}
     >

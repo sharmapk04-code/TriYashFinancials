@@ -6,16 +6,8 @@ import { NAV_LINKS, SITE } from "@/lib/siteConfig";
 import { cn } from "@/lib/utils";
 
 export default function SiteHeader() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -29,14 +21,7 @@ export default function SiteHeader() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-background/90 backdrop-blur-xl border-b border-border/60 shadow-sm"
-          : "bg-transparent"
-      )}
-    >
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 shadow-sm backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-20 items-center justify-between gap-6">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
@@ -53,9 +38,7 @@ export default function SiteHeader() {
                     "relative px-3.5 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors",
                     isActive
                       ? "text-accent"
-                      : scrolled
-                      ? "text-foreground/75 hover:text-accent"
-                      : "text-white/85 hover:text-accent"
+                      : "text-foreground/75 hover:text-accent"
                   )
                 }
               >
@@ -76,10 +59,7 @@ export default function SiteHeader() {
 
           <button
             onClick={() => setOpen((v) => !v)}
-            className={cn(
-              "lg:hidden inline-flex items-center justify-center p-2",
-              scrolled ? "text-foreground" : "text-white"
-            )}
+            className="lg:hidden inline-flex items-center justify-center p-2 text-foreground"
             aria-label="Toggle menu"
             aria-expanded={open}
           >

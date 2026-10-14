@@ -3,7 +3,7 @@ export const SITE = {
   name: "TriYash Financial Services LLC",
   shortName: "TriYash",
   tagline: "Protecting Families Through Life & Health Insurance",
-  logoUrl: "https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/b17a42dd5_Logo-1.png",
+  logoUrl: "https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/2f843f1a9_Logo-1.png",
   phone: "(000) 000-0000",
   email: "info@triyashfinancial.com",
   address: "123 Financial Plaza, Suite 1000, New York, NY 10001",
