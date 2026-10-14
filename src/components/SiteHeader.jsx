@@ -23,9 +23,9 @@ export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 shadow-sm backdrop-blur-xl">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="flex h-20 items-center justify-between gap-6">
+        <div className="flex h-32 items-center justify-between gap-6 sm:h-40">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
-            <Logo className="h-14 w-14 rounded sm:h-16 sm:w-16" />
+            <Logo className="h-28 w-28 rounded sm:h-32 sm:w-32" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
