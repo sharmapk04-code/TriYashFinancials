@@ -22,7 +22,7 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 shadow-sm backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl">
+      <div>
         <div className="flex items-center justify-between gap-6">
           <Link to="/" className="shrink-0" aria-label={SITE.name}>
             <Logo src={SITE.logoLandscapeUrl} className="h-20 w-[271px] sm:h-24 sm:w-[326px]" />
