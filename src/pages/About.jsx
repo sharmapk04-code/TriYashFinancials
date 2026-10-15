@@ -4,15 +4,15 @@ import { Target, Eye, Heart, HeartPulse, ShieldCheck, Users, Award, ArrowRight }
 import PageHero, { CTAButton } from "@/components/PageHero";
 
 const pillars = [
-  { icon: ShieldCheck, title: "Protect", desc: "Life insurance that shields your family's income and future when the unexpected happens." },
-  { icon: HeartPulse, title: "Cover", desc: "Health, Medicare, and supplemental plans that keep quality care within reach." },
-  { icon: Users, title: "Preserve", desc: "Final expense and legacy coverage that eases the burden on those you love." },
+  { icon: ShieldCheck, title: "Protect", desc: "Life insurance that shields your family's income and future when the unexpected happens.", badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30" },
+  { icon: HeartPulse, title: "Cover", desc: "Health, Medicare, and supplemental plans that keep quality care within reach.", badge: "bg-gradient-to-br from-rose-400 to-red-600 shadow-rose-500/30" },
+  { icon: Users, title: "Preserve", desc: "Final expense and legacy coverage that eases the burden on those you love.", badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30" },
 ];
 
 const values = [
-  { icon: Heart, title: "Family at the Center", desc: "Every plan is designed around the people who depend on you." },
-  { icon: Award, title: "Excellence in Advice", desc: "We hold ourselves to the highest standard of professional guidance." },
-  { icon: Target, title: "Clarity Over Complexity", desc: "We translate the complicated into the understandable." },
+  { icon: Heart, title: "Family at the Center", desc: "Every plan is designed around the people who depend on you.", badge: "bg-gradient-to-br from-rose-400 to-pink-600 shadow-rose-500/30" },
+  { icon: Award, title: "Excellence in Advice", desc: "We hold ourselves to the highest standard of professional guidance.", badge: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-amber-500/30" },
+  { icon: Target, title: "Clarity Over Complexity", desc: "We translate the complicated into the understandable.", badge: "bg-gradient-to-br from-violet-400 to-purple-600 shadow-violet-500/30" },
 ];
 
 export default function About() {
@@ -50,13 +50,13 @@ export default function About() {
             <div className="lg:col-span-6">
               <div className="grid gap-5 sm:grid-cols-3">
                 {pillars.map((p, i) => (
-                  <div key={p.title} className="bg-secondary/50 p-7 text-center">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center bg-primary text-accent">
-                      <p.icon className="h-7 w-7" />
+                  <div key={p.title} className="group bg-card p-7 text-center shadow-md ring-1 ring-border/60 transition-all hover:-translate-y-1.5 hover:shadow-xl">
+                    <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 ${p.badge}`}>
+                      <p.icon className="h-8 w-8" />
                     </div>
-                    <div className="mt-4 font-heading text-2xl text-accent">0{i + 1}</div>
-                    <h3 className="mt-1 font-heading text-xl text-foreground">{p.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+                    <div className="mt-4 font-heading text-2xl font-semibold text-accent">0{i + 1}</div>
+                    <h3 className="mt-1 font-heading text-2xl font-semibold text-foreground">{p.title}</h3>
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-foreground/75">{p.desc}</p>
                   </div>
                 ))}
               </div>
@@ -70,16 +70,20 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <Target className="h-8 w-8 text-accent" />
-              <h3 className="mt-5 font-heading text-3xl">Our Mission</h3>
-              <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 text-white shadow-lg shadow-indigo-500/30">
+                <Target className="h-8 w-8" />
+              </div>
+              <h3 className="mt-6 font-heading text-3xl font-semibold sm:text-4xl">Our Mission</h3>
+              <p className="mt-4 text-base font-medium leading-relaxed text-primary-foreground/85">
                 To protect every family with honest, needs-based life and health insurance guidance — never selling a policy, always solving a problem.
               </p>
             </div>
             <div>
-              <Eye className="h-8 w-8 text-accent" />
-              <h3 className="mt-5 font-heading text-3xl">Our Vision</h3>
-              <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg shadow-amber-500/30">
+                <Eye className="h-8 w-8" />
+              </div>
+              <h3 className="mt-6 font-heading text-3xl font-semibold sm:text-4xl">Our Vision</h3>
+              <p className="mt-4 text-base font-medium leading-relaxed text-primary-foreground/85">
                 To become the most trusted life and health insurance partner — a firm known not for what it sells, but for the families it protects.
               </p>
             </div>
@@ -96,10 +100,12 @@ export default function About() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {values.map((v) => (
-              <div key={v.title} className="border border-border bg-card p-8 transition-colors hover:border-accent">
-                <v.icon className="h-7 w-7 text-accent" />
-                <h3 className="mt-5 font-heading text-2xl text-foreground">{v.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
+              <div key={v.title} className="group border border-border bg-card p-8 text-center shadow-md transition-all hover:-translate-y-1.5 hover:border-accent hover:shadow-xl">
+                <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 ${v.badge}`}>
+                  <v.icon className="h-8 w-8" />
+                </div>
+                <h3 className="mt-6 font-heading text-2xl font-semibold text-foreground sm:text-3xl">{v.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-foreground/75 sm:text-base">{v.desc}</p>
               </div>
             ))}
           </div>

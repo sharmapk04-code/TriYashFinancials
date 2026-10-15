@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, Tag, Search } from "lucide-react";
+import { ArrowRight, Clock, Search, ShieldCheck, HeartPulse, Stethoscope, Briefcase } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +21,13 @@ const posts = [
 ];
 
 const categories = ["All", "Life Insurance", "Health Insurance", "Medicare", "Career"];
+
+const categoryMeta = {
+  "Life Insurance": { icon: ShieldCheck, badge: "bg-gradient-to-br from-rose-400 to-red-600 shadow-rose-500/30" },
+  "Health Insurance": { icon: HeartPulse, badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30" },
+  "Medicare": { icon: Stethoscope, badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30" },
+  "Career": { icon: Briefcase, badge: "bg-gradient-to-br from-violet-400 to-purple-600 shadow-violet-500/30" },
+};
 
 export default function Blog() {
   const [active, setActive] = useState("All");
@@ -105,19 +112,25 @@ export default function Blog() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((p) => (
-              <article key={p.title} className="group flex flex-col border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
-                  <Tag className="h-3.5 w-3.5" /> {p.category}
+            {filtered.map((p) => {
+              const meta = categoryMeta[p.category];
+              return (
+              <article key={p.title} className="group flex flex-col border border-border bg-card p-7 shadow-md transition-all hover:-translate-y-1.5 hover:border-accent hover:shadow-xl">
+                <div className={`flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 ${meta.badge}`}>
+                  <meta.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-4 font-heading text-2xl leading-tight text-foreground">{p.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{p.excerpt}</p>
+                <div className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-accent">
+                  {p.category}
+                </div>
+                <h3 className="mt-2 font-heading text-2xl font-semibold leading-tight text-foreground">{p.title}</h3>
+                <p className="mt-3 flex-1 text-sm font-medium leading-relaxed text-foreground/75">{p.excerpt}</p>
                 <div className="mt-6 flex items-center justify-between border-t border-border pt-4 text-xs text-muted-foreground">
                   <span>{p.date}</span>
                   <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {p.read}</span>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
           {filtered.length === 0 && (
             <p className="mt-10 text-center text-muted-foreground">No articles match your search.</p>

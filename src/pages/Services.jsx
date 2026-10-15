@@ -3,12 +3,12 @@ import { ShieldCheck, HeartPulse, Stethoscope, Umbrella, Home, Landmark, ArrowRi
 import PageHero, { CTAButton } from "@/components/PageHero";
 
 const services = [
-  { icon: ShieldCheck, title: "Term Life Insurance", desc: "Affordable, straightforward protection for the years your family depends on you most — the mortgage, the income, the future.", points: ["Level-term & convertible policies", "Income replacement planning", "Mortgage protection"] },
-  { icon: Landmark, title: "Whole & Permanent Life", desc: "Lifelong coverage with cash value that grows over time — protection that never expires and can support your legacy.", points: ["Whole & universal life", "Cash value accumulation", "Estate & final expense funding"] },
-  { icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach — on and off the marketplace.", points: ["Individual & family plans", "Employer & group coverage", "Marketplace & ACA guidance"] },
-  { icon: Stethoscope, title: "Medicare & Supplemental", desc: "Turning 65 or already there? We make Medicare simple — from Advantage plans to Medigap and Part D.", points: ["Medicare Advantage (Part C)", "Medigap & supplemental plans", "Prescription drug (Part D)"] },
-  { icon: Umbrella, title: "Disability & Critical Illness", desc: "Income protection and lump-sum benefits that fill the gap when illness or injury keeps you from working.", points: ["Disability income coverage", "Critical illness & cancer policies", "Hospital indemnity plans"] },
-  { icon: Home, title: "Final Expense & Legacy", desc: "Modest, guaranteed coverage that eases the burden on loved ones and honors your wishes.", points: ["Final expense & burial insurance", "Annuities for guaranteed income", "Beneficiary & legacy review"] },
+  { icon: ShieldCheck, title: "Term Life Insurance", badge: "bg-gradient-to-br from-rose-400 to-red-600 shadow-rose-500/30", desc: "Affordable, straightforward protection for the years your family depends on you most — the mortgage, the income, the future.", points: ["Level-term & convertible policies", "Income replacement planning", "Mortgage protection"] },
+  { icon: Landmark, title: "Whole & Permanent Life", badge: "bg-gradient-to-br from-violet-400 to-purple-600 shadow-violet-500/30", desc: "Lifelong coverage with cash value that grows over time — protection that never expires and can support your legacy.", points: ["Whole & universal life", "Cash value accumulation", "Estate & final expense funding"] },
+  { icon: HeartPulse, title: "Health Insurance", badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30", desc: "Individual, family, and group medical plans that keep quality care within reach — on and off the marketplace.", points: ["Individual & family plans", "Employer & group coverage", "Marketplace & ACA guidance"] },
+  { icon: Stethoscope, title: "Medicare & Supplemental", badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30", desc: "Turning 65 or already there? We make Medicare simple — from Advantage plans to Medigap and Part D.", points: ["Medicare Advantage (Part C)", "Medigap & supplemental plans", "Prescription drug (Part D)"] },
+  { icon: Umbrella, title: "Disability & Critical Illness", badge: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-amber-500/30", desc: "Income protection and lump-sum benefits that fill the gap when illness or injury keeps you from working.", points: ["Disability income coverage", "Critical illness & cancer policies", "Hospital indemnity plans"] },
+  { icon: Home, title: "Final Expense & Legacy", badge: "bg-gradient-to-br from-fuchsia-400 to-purple-600 shadow-fuchsia-500/30", desc: "Modest, guaranteed coverage that eases the burden on loved ones and honors your wishes.", points: ["Final expense & burial insurance", "Annuities for guaranteed income", "Beneficiary & legacy review"] },
 ];
 
 const steps = [
@@ -39,12 +39,12 @@ export default function Services() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <div key={s.title} className="group flex flex-col border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg">
-                <div className="flex h-12 w-12 items-center justify-center bg-primary text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                  <s.icon className="h-6 w-6" />
+              <div key={s.title} className="group flex flex-col border border-border bg-card p-8 shadow-md transition-all hover:-translate-y-1.5 hover:border-accent hover:shadow-xl">
+                <div className={`flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 ${s.badge}`}>
+                  <s.icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 font-heading text-2xl text-foreground">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <h3 className="mt-6 font-heading text-2xl font-semibold text-foreground sm:text-3xl">{s.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-foreground/75 sm:text-base">{s.desc}</p>
                 <ul className="mt-5 space-y-2 border-t border-border pt-5">
                   {s.points.map((p) => (
                     <li key={p} className="flex items-center gap-2 text-sm text-foreground/80">
@@ -69,7 +69,7 @@ export default function Services() {
             {steps.map((s) => (
               <div key={s.n} className="relative">
                 <div className="font-heading text-5xl font-light text-accent/40">{s.n}</div>
-                <h3 className="mt-3 font-heading text-2xl">{s.title}</h3>
+                <h3 className="mt-3 font-heading text-2xl font-semibold">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{s.desc}</p>
               </div>
             ))}

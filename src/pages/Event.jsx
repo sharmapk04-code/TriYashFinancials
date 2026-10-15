@@ -91,6 +91,9 @@ export default function Event() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 text-white shadow-lg shadow-indigo-500/30">
+              <CalendarDays className="h-8 w-8" />
+            </div>
             <span className="hero-eyebrow mb-5 text-primary">Webinar Calendar</span>
             <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl lg:text-5xl">
               Find a date that works for you.
@@ -130,6 +133,9 @@ export default function Event() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="mx-auto max-w-2xl text-center">
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-lg shadow-emerald-500/30">
+              <Video className="h-8 w-8" />
+            </div>
             <span className="hero-eyebrow mb-5 text-primary">Upcoming Events</span>
             <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl lg:text-5xl">Reserve your place at the table.</h2>
           </div>
@@ -192,9 +198,11 @@ export default function Event() {
       {/* PAST EVENTS */}
       <section className="bg-secondary/40 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="flex items-center gap-3">
-            <CalendarDays className="h-6 w-6 text-accent" />
-            <h2 className="font-heading text-2xl font-light sm:text-3xl">Past Events</h2>
+          <div className="flex items-center gap-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg shadow-amber-500/30">
+              <CalendarDays className="h-7 w-7" />
+            </div>
+            <h2 className="font-heading text-2xl font-semibold sm:text-3xl">Past Events</h2>
           </div>
           <ul className="mt-8 divide-y divide-border border-y border-border">
             {past.map((p) => (

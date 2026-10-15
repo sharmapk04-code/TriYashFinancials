@@ -3,10 +3,10 @@ import { Users, TrendingUp, Award, Compass, HandHeart, ArrowRight, Check } from 
 import PageHero, { CTAButton } from "@/components/PageHero";
 
 const benefits = [
-  { icon: Compass, title: "Purpose-Driven Work", desc: "Spend every day helping families build real, lasting security." },
-  { icon: Award, title: "World-Class Training", desc: "A structured development path with mentorship from day one." },
-  { icon: TrendingUp, title: "Unlimited Earning", desc: "A compensation model that rewards dedication and results." },
-  { icon: HandHeart, title: "Supportive Community", desc: "A team that celebrates your wins and lifts you through challenges." },
+  { icon: Compass, title: "Purpose-Driven Work", desc: "Spend every day helping families build real, lasting security.", badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30" },
+  { icon: Award, title: "World-Class Training", desc: "A structured development path with mentorship from day one.", badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30" },
+  { icon: TrendingUp, title: "Unlimited Earning", desc: "A compensation model that rewards dedication and results.", badge: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-amber-500/30" },
+  { icon: HandHeart, title: "Supportive Community", desc: "A team that celebrates your wins and lifts you through challenges.", badge: "bg-gradient-to-br from-rose-400 to-pink-600 shadow-rose-500/30" },
 ];
 
 const steps = [
@@ -48,10 +48,12 @@ export default function BusinessOpportunity() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map((b) => (
-              <div key={b.title} className="border-t-2 border-accent bg-secondary/40 p-7">
-                <b.icon className="h-7 w-7 text-accent" />
-                <h3 className="mt-4 font-heading text-xl text-foreground">{b.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.desc}</p>
+              <div key={b.title} className="group border border-border bg-card p-7 text-center shadow-md transition-all hover:-translate-y-1.5 hover:shadow-xl">
+                <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 ${b.badge}`}>
+                  <b.icon className="h-7 w-7" />
+                </div>
+                <h3 className="mt-5 font-heading text-xl font-semibold text-foreground sm:text-2xl">{b.title}</h3>
+                <p className="mt-2 text-sm font-medium leading-relaxed text-foreground/75 sm:text-base">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -70,7 +72,7 @@ export default function BusinessOpportunity() {
               <div key={s.n} className="relative border-l border-primary-foreground/20 pl-6">
                 <div className="absolute -left-px top-0 h-10 w-px bg-accent" />
                 <div className="font-heading text-4xl font-light text-accent">{s.n}</div>
-                <h3 className="mt-2 font-heading text-2xl">{s.title}</h3>
+                <h3 className="mt-2 font-heading text-2xl font-semibold">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{s.desc}</p>
               </div>
             ))}
@@ -110,8 +112,10 @@ export default function BusinessOpportunity() {
       {/* CTA */}
       <section className="bg-secondary/40 py-20 sm:py-24">
         <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
-          <Users className="mx-auto h-10 w-10 text-accent" />
-          <h2 className="mt-5 text-balance font-heading text-3xl font-light sm:text-4xl">Ready to build something meaningful?</h2>
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-400 to-purple-600 text-white shadow-lg shadow-fuchsia-500/30">
+            <Users className="h-8 w-8" />
+          </div>
+          <h2 className="mt-6 text-balance font-heading text-3xl font-light sm:text-4xl">Ready to build something meaningful?</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Start a conversation with our team. There's no obligation — just an honest discussion about whether this path is right for you.</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact">Partner With TriYash</CTAButton>

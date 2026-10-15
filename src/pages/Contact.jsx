@@ -1,15 +1,15 @@
 import React from "react";
-import { Phone, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, CheckCircle2, CalendarCheck } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 import ConsultationScheduler from "@/components/ConsultationScheduler";
 import { SITE } from "@/lib/siteConfig";
 
 export default function Contact() {
   const contactItems = [
-  { icon: Phone, label: "Call Us", value: SITE.phone, href: `tel:${SITE.phone}` },
-  { icon: Mail, label: "Email Us", value: SITE.email, href: `mailto:${SITE.email}` },
-  { icon: MapPin, label: "Visit Us", value: SITE.address },
-  { icon: Clock, label: "Office Hours", value: SITE.hours }];
+  { icon: Phone, label: "Call Us", value: SITE.phone, href: `tel:${SITE.phone}`, badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30" },
+  { icon: Mail, label: "Email Us", value: SITE.email, href: `mailto:${SITE.email}`, badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30" },
+  { icon: MapPin, label: "Visit Us", value: SITE.address, badge: "bg-gradient-to-br from-rose-400 to-red-600 shadow-rose-500/30" },
+  { icon: Clock, label: "Office Hours", value: SITE.hours, badge: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-amber-500/30" }];
 
 
   return (
@@ -27,6 +27,9 @@ export default function Contact() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid items-start gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
+              <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 text-white shadow-lg shadow-indigo-500/30">
+                <CalendarCheck className="h-8 w-8" />
+              </div>
               <span className="hero-eyebrow mb-5 text-primary">Book a Consultation</span>
               <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl">
                 Pick a time that works for you.
@@ -54,7 +57,7 @@ export default function Contact() {
                 <ul className="mt-8 space-y-6">
                   {contactItems.map((c) =>
                   <li key={c.label} className="flex items-start gap-4">
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-accent/15 text-accent">
+                      <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white shadow-md ${c.badge}`}>
                         <c.icon className="h-5 w-5" />
                       </span>
                       <div>
