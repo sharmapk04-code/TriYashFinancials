@@ -14,6 +14,7 @@ import BusinessOpportunity from '@/pages/BusinessOpportunity';
 import Event from '@/pages/Event';
 import Blog from '@/pages/Blog';
 import Contact from '@/pages/Contact';
+import ServiceDetail from '@/pages/ServiceDetail';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/business-opportunity" element={<BusinessOpportunity />} />
         <Route path="/events" element={<Event />} />
         <Route path="/blog" element={<Blog />} />

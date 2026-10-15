@@ -17,6 +17,15 @@ export const SITE = {
   },
 };
 
+export const SERVICE_LINKS = [
+  { label: "Term Life Insurance", path: "/services/term-life-insurance" },
+  { label: "Indexed Universal Life Insurance", path: "/services/indexed-universal-life-insurance" },
+  { label: "Indexed Annuities", path: "/services/indexed-annuities" },
+  { label: "Health Insurance", path: "/services/health-insurance" },
+  { label: "Medicare Insurance", path: "/services/medicare-insurance" },
+  { label: "Importance of Estate Planning Documents", path: "/services/estate-planning" },
+];
+
 export const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
