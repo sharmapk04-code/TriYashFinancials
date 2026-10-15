@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { base44 } from "@/api/base44Client";
+import WebinarCalendar from "@/components/events/WebinarCalendar";
+import WebinarRegistrationDialog from "@/components/events/WebinarRegistrationDialog";
 import { CalendarDays, MapPin, Clock, ArrowRight, Video, Users } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 import { cn } from "@/lib/utils";
@@ -55,6 +58,19 @@ const past = [
 
 export default function Event() {
   const [active, setActive] = useState(0);
+  const [webinars, setWebinars] = useState([]);
+  const [loadingWebinars, setLoadingWebinars] = useState(true);
+  const [selected, setSelected] = useState(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  useEffect(() => {
+    base44.entities.Webinar.filter(
+      { start_date: { $gte: new Date().toISOString() } },
+      { sort: "start_date", limit: 50 }
+    )
+      .then((page) => setWebinars(page.items))
+      .finally(() => setLoadingWebinars(false));
+  }, []);
 
   return (
     <>
@@ -70,6 +86,45 @@ export default function Event() {
           </>
         }
       />
+
+      {/* WEBINAR CALENDAR */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="hero-eyebrow mb-5 text-primary">Webinar Calendar</span>
+            <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl lg:text-5xl">
+              Find a date that works for you.
+            </h2>
+            <p className="mt-4 text-sm text-muted-foreground sm:text-base">
+              Browse our upcoming informational insurance webinars and click any session to reserve your spot. Free to attend.
+            </p>
+          </div>
+
+          {loadingWebinars ? (
+            <div className="mt-12 flex justify-center">
+              <div className="h-8 w-8 animate-spin rounded-full border-4 border-secondary border-t-primary" />
+            </div>
+          ) : (
+            <>
+              <div className="mx-auto mt-12 max-w-5xl">
+                <WebinarCalendar
+                  webinars={webinars}
+                  onSelect={(w) => {
+                    setSelected(w);
+                    setDialogOpen(true);
+                  }}
+                />
+              </div>
+              {webinars.length === 0 && (
+                <p className="mt-8 text-center text-sm text-muted-foreground">
+                  No webinars are scheduled right now — check back soon, or{" "}
+                  <Link to="/contact" className="text-accent hover:underline">contact us</Link> to request a topic.
+                </p>
+              )}
+            </>
+          )}
+        </div>
+      </section>
 
       {/* UPCOMING EVENTS */}
       <section className="py-20 sm:py-28">
@@ -151,6 +206,7 @@ export default function Event() {
           </ul>
         </div>
       </section>
+      <WebinarRegistrationDialog webinar={selected} open={dialogOpen} onClose={() => setDialogOpen(false)} />
     </>
   );
 }
