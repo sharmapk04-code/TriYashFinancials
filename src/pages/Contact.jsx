@@ -133,17 +133,17 @@ export default function Contact() {
                 </ul>
               </div>
 
-              <div className="mt-6 border border-border bg-secondary/40 p-8 hidden">
-                <h3 className="font-heading text-xl text-foreground">Office Location</h3>
-                <div className="mt-4 aspect-[4/3] bg-primary/5">
-                  <iframe
-                    title="TriYash office location"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-74.01%2C40.70%2C-73.98%2C40.72&layer=mapnik"
-                    className="h-full w-full grayscale"
-                    loading="lazy" />
-                  
-                </div>
-              </div>
+              
+
+
+
+
+
+
+
+
+
+              
             </div>
           </div>
         </div>
