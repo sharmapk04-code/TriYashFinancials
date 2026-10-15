@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, TrendingUp, Users, HeartPulse, Umbrella, BookOpen, CalendarDays, Quote } from "lucide-react";
+import { ArrowRight, ShieldCheck, TrendingUp, Users, HeartPulse, Umbrella, BookOpen, Quote } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
 import { SITE } from "@/lib/siteConfig";
 
@@ -126,10 +126,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OPPORTUNITY + EVENTS + BLOG TEASERS */}
+      {/* OPPORTUNITY + BLOG TEASERS */}
       <section className="bg-primary py-20 sm:py-28 text-primary-foreground">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-3">
+          <div className="grid gap-12 lg:grid-cols-2">
             <div className="lg:col-span-1">
               <Users className="h-8 w-8 text-accent" />
               <h3 className="mt-5 font-heading text-2xl">Build a Career With Purpose</h3>
@@ -138,16 +138,6 @@ export default function Home() {
               </p>
               <Link to="/business-opportunity" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 Explore the Opportunity <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <div className="lg:col-span-1">
-              <CalendarDays className="h-8 w-8 text-accent" />
-              <h3 className="mt-5 font-heading text-2xl">Upcoming Events</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
-                Join our seminars and webinars to learn from our advisors and community.
-              </p>
-              <Link to="/events" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                View Events <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
             <div className="lg:col-span-1">

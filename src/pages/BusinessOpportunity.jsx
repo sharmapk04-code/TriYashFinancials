@@ -115,7 +115,6 @@ export default function BusinessOpportunity() {
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Start a conversation with our team. There's no obligation — just an honest discussion about whether this path is right for you.</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact">Partner With TriYash</CTAButton>
-            <CTAButton to="/events" variant="outline">Attend an Event</CTAButton>
           </div>
         </div>
       </section>
