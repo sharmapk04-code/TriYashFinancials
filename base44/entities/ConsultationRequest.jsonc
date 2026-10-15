@@ -1,0 +1,55 @@
+{
+  "name": "ConsultationRequest",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "preferred_time": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon",
+        "evening"
+      ],
+      "default": "morning"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "preferred_date"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

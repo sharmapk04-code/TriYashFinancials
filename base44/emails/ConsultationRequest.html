@@ -1,0 +1,68 @@
+<mjml>
+  <mj-head>
+    <mj-title>New consultation request from {{full_name}}</mj-title>
+    <mj-preview>{{full_name}} requested a consultation on {{preferred_date}}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Inter, Helvetica, Arial, sans-serif" />
+      <mj-section padding="0" />
+      <mj-text color="#191b1f" font-size="15px" line-height="1.6" padding="0" />
+      <mj-button background-color="#002061" color="#f8f6f2" border-radius="0px" font-weight="700" inner-padding="14px 28px" align="left" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#f8f6f2">
+    <mj-section background-color="#002061" padding="24px 36px">
+      <mj-column>
+        <mj-image src="https://media.base44.com/images/public/6ace3a79bf97d59236ea95e5/7023bba67_logo.png" alt="TriYash Financial Services" width="180px" padding="0" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f8f6f2" padding="36px 36px 16px">
+      <mj-column>
+        <mj-text font-family="Cormorant Garamond, Georgia, serif" font-size="32px" font-weight="600" line-height="1.2" color="#002061">
+          New consultation request
+        </mj-text>
+        <mj-text color="#5e636e" font-size="15px" padding-top="8px">
+          A visitor has requested a consultation through your website. The details are below.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-wrapper background-color="#ffffff" border="1px solid #e5e7eb" padding="32px 28px">
+      <mj-section background-color="#ffffff" padding="0">
+        <mj-column>
+          <mj-text font-size="11px" font-weight="700" letter-spacing="2px" text-transform="uppercase" color="#C5A059" padding-bottom="16px">
+            Request details
+          </mj-text>
+          <mj-text font-size="15px">
+            <strong>Client:</strong> {{full_name}}<br />
+            <strong>Email:</strong> {{client_email}}<br />
+            <strong>Phone:</strong> {{client_phone}}<br />
+            <strong>Preferred date:</strong> {{preferred_date}}<br />
+            <strong>Preferred time:</strong> {{preferred_time}}<br />
+            <strong>Notes:</strong> {{notes}}
+          </mj-text>
+          <mj-text font-size="14px" color="#5e636e" padding-top="16px">
+            Please reply directly to the client at {{client_email}} to confirm the appointment.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-section background-color="#f8f6f2" padding="28px 36px 40px">
+      <mj-column>
+        <mj-button href="https://triyashfinancial.com/contact">
+          View your contact page
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="20px 36px" border-top="3px solid #C5A059">
+      <mj-column>
+        <mj-text font-size="12px" color="#5e636e" align="center">
+          TriYash Financial Services LLC &middot; Frisco, TX 75035<br />
+          &copy; 2026 All rights reserved.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

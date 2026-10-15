@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 import PageHero, { CTAButton } from "@/components/PageHero";
+import ConsultationScheduler from "@/components/ConsultationScheduler";
 import { SITE } from "@/lib/siteConfig";
 
 const reasons = [
@@ -143,6 +144,39 @@ export default function Contact() {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SCHEDULE A CONSULTATION */}
+      <section className="bg-secondary/40 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid items-start gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <span className="hero-eyebrow mb-5 text-primary">Book a Consultation</span>
+              <h2 className="text-balance font-heading text-3xl font-light sm:text-4xl">
+                Pick a time that works for you.
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Choose a preferred date and time window for a one-on-one consultation, by phone or video.
+                We'll confirm your appointment by email or phone within one business day.
+              </p>
+              <ul className="mt-8 space-y-4">
+                {[
+                  "Complimentary, no-obligation consultation",
+                  "Roughly 30 minutes with a licensed advisor",
+                  "Evening windows available for working families",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-foreground/80">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-7">
+              <ConsultationScheduler />
             </div>
           </div>
         </div>
