@@ -40,7 +40,7 @@ export default function Home() {
             Protection for Your Family's <span className="text-gold-gradient">Life, Health and Retirement</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-balance text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
-            {SITE.tagline}. Our advisors help you choose the right coverage — protection that guards your health, your income, and the people you love.
+            Protecting Families Through Life &amp; Health Insurance and worry free Retirement. Our licensed professionals help you choose the right coverage — protection and retirement strategies that guards your health, your income, your retirement income and the people you love.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <CTAButton to="/contact">Get Started</CTAButton>
