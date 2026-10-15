@@ -124,7 +124,7 @@ export default function Home() {
           <p className="mt-6 text-balance font-heading text-2xl font-light italic leading-relaxed text-foreground sm:text-3xl">
             "TriYash didn't just sell us a policy — they drew a map for our family's next forty years. For the first time, we feel genuinely secure."
           </p>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground">— The Patel Family, Clients since 2016</p>
+          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground">— The Patel Family, Clients since 2024</p>
         </div>
       </section>
 
