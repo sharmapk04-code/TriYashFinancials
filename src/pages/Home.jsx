@@ -92,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="bg-secondary/40 py-20 sm:py-28">
+      <section className="bg-secondary/40 py-20 sm:py-28 opacity-100">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <span className="hero-eyebrow mb-5 text-primary">What We Do</span>
