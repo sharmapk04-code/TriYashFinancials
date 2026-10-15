@@ -36,7 +36,7 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-28 sm:pt-24 sm:pb-36 text-center">
           
-          <h1 className="mx-auto max-w-4xl text-balance font-heading text-4xl font-light leading-[1.05] sm:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-5xl text-balance font-heading text-5xl font-semibold leading-[1.05] sm:text-7xl lg:text-8xl">
             Protection for Your Family's <span className="text-gold-gradient">Life & Health</span>
           </h1>
           <p className="mx-auto mt-7 max-w-2xl text-balance text-base leading-relaxed text-primary-foreground/80 sm:text-lg">
