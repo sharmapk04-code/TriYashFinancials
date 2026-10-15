@@ -18,9 +18,9 @@ const services = [
 
 
 const values = [
-{ icon: ShieldCheck, title: "Integrity First", desc: "Every recommendation is made in your family's best interest — always." },
-{ icon: Users, title: "Family-Centered", desc: "We plan across generations, not just for the next quarter." },
-{ icon: TrendingUp, title: "Lifelong Guidance", desc: "We review your coverage as life changes — marriage, children, retirement." }];
+{ icon: ShieldCheck, title: "Integrity First", desc: "Every recommendation is made in your family's best interest — always.", badge: "bg-gradient-to-br from-emerald-400 to-teal-600 shadow-emerald-500/30" },
+{ icon: Users, title: "Family-Centered", desc: "We plan across generations, not just for the next quarter.", badge: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-amber-500/30" },
+{ icon: TrendingUp, title: "Lifelong Guidance", desc: "We review your coverage as life changes — marriage, children, retirement.", badge: "bg-gradient-to-br from-sky-400 to-indigo-600 shadow-indigo-500/30" }];
 
 
 export default function Home() {
@@ -75,12 +75,14 @@ export default function Home() {
               <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
                 "Tri" stands for the three promises at the heart of our practice — <span className="font-semibold text-foreground">protecting your life, safeguarding your health, and securing your family's future</span>. We translate complex insurance decisions into clear, needs-based coverage so your family can move forward with confidence, no matter what life brings.
               </p>
-              <div className="mt-8 grid gap-5 sm:grid-cols-3">
+              <div className="mt-10 grid gap-6 sm:grid-cols-3">
                 {values.map((v) =>
-                <div key={v.title} className="border-t border-border pt-5">
-                    <v.icon className="h-6 w-6 text-accent" />
-                    <h3 className="mt-3 font-heading text-xl text-foreground">{v.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
+                <div key={v.title} className="group bg-card p-6 text-center shadow-md ring-1 ring-border/60 transition-all hover:-translate-y-1.5 hover:shadow-xl sm:p-8">
+                    <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 sm:h-16 sm:w-16 ${v.badge}`}>
+                      <v.icon className="h-7 w-7 sm:h-8 sm:w-8" />
+                    </div>
+                    <h3 className="mt-6 font-heading text-2xl font-semibold text-foreground sm:text-3xl">{v.title}</h3>
+                    <p className="mt-3 text-sm font-medium leading-relaxed text-foreground/75 sm:text-base">{v.desc}</p>
                   </div>
                 )}
               </div>
