@@ -12,9 +12,9 @@ const stats = [
 
 
 const services = [
-{ icon: ShieldCheck, title: "Life Insurance", desc: "Term, whole, and universal coverage that protects your family's income and future." },
-{ icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach." },
-{ icon: Umbrella, title: "Medicare & Supplemental", desc: "Medicare, disability, and critical illness coverage that fills every gap." }];
+{ icon: ShieldCheck, title: "Life Insurance", desc: "Term, whole, and universal coverage that protects your family's income and future.", badge: "bg-gradient-to-br from-rose-400 to-red-600 shadow-red-500/30" },
+{ icon: HeartPulse, title: "Health Insurance", desc: "Individual, family, and group medical plans that keep quality care within reach.", badge: "bg-gradient-to-br from-violet-400 to-purple-600 shadow-purple-500/30" },
+{ icon: Umbrella, title: "Medicare & Supplemental", desc: "Medicare, disability, and critical illness coverage that fills every gap.", badge: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-500/30" }];
 
 
 const values = [
@@ -102,12 +102,12 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {services.map((s) =>
-            <div key={s.title} className="group relative bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
-                <div className="flex h-12 w-12 items-center justify-center bg-primary text-accent">
-                  <s.icon className="h-6 w-6" />
+            <div key={s.title} className="group relative bg-card p-8 text-center shadow-md ring-1 ring-border/60 transition-all hover:-translate-y-1.5 hover:shadow-xl">
+                <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-lg transition-transform duration-300 group-hover:scale-110 sm:h-16 sm:w-16 ${s.badge}`}>
+                  <s.icon className="h-7 w-7 sm:h-8 sm:w-8" />
                 </div>
-                <h3 className="mt-6 font-heading text-2xl text-foreground">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <h3 className="mt-6 font-heading text-2xl font-semibold text-foreground sm:text-3xl">{s.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-foreground/75 sm:text-base">{s.desc}</p>
                 <Link to="/services" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                   Learn More <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -133,9 +133,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <div className="lg:col-span-1">
-              <Users className="h-8 w-8 text-accent" />
-              <h3 className="mt-5 font-heading text-2xl">Build a Career With Purpose</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg shadow-amber-500/30">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="mt-6 font-heading text-2xl font-semibold sm:text-3xl">Build a Career With Purpose</h3>
+              <p className="mt-3 text-sm font-medium leading-relaxed text-primary-foreground/80 sm:text-base">
                 Join a mission-driven team helping families secure their future while building your own.
               </p>
               <Link to="/business-opportunity" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
@@ -143,9 +145,11 @@ export default function Home() {
               </Link>
             </div>
             <div className="lg:col-span-1">
-              <BookOpen className="h-8 w-8 text-accent" />
-              <h3 className="mt-5 font-heading text-2xl">From the Blog</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-400 to-purple-600 text-white shadow-lg shadow-fuchsia-500/30">
+                <BookOpen className="h-8 w-8" />
+              </div>
+              <h3 className="mt-6 font-heading text-2xl font-semibold sm:text-3xl">From the Blog</h3>
+              <p className="mt-3 text-sm font-medium leading-relaxed text-primary-foreground/80 sm:text-base">
                 Practical insights on life, health, and Medicare coverage for your family.
               </p>
               <Link to="/blog" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
