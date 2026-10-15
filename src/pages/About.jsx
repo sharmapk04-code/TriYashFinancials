@@ -41,7 +41,7 @@ export default function About() {
                 Three commitments. One unshakable foundation.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                The name "TriYash" reflects our three-part philosophy: <strong className="text-foreground">Tri</strong> — the three promises of Protect, Cover, and Preserve — and <strong className="text-foreground">Yash</strong> — the peace of mind and security we help families achieve. Together, they form the architecture of a fully protected family.
+                The name "TriYash" reflects our three-part philosophy: <strong className="text-foreground">Tri</strong> — the three promises of Protect, Cover, and Preserve — along with <strong className="text-foreground">Yash</strong> — the peace of mind and security we help families achieve. Together, they form the architecture of a fully protected family.
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 We are independent and not tied to a single carrier. Our advisors shop the market to find coverage that fits your life and your budget — not the other way around.
