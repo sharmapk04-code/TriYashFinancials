@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, ArrowUp, Linkedin, Facebook, Twitter, Instagram } from "lucide-react";
 import Logo from "@/components/Logo";
+import FooterDisclaimer from "@/components/FooterDisclaimer";
 import { NAV_LINKS, SITE } from "@/lib/siteConfig";
 
 const socialIcons = {
@@ -81,7 +82,9 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/15 pt-8 sm:flex-row">
+        <FooterDisclaimer />
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/15 pt-8 sm:flex-row">
           <p className="text-xs text-primary-foreground/55">
             © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
